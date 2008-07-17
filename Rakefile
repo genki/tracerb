@@ -8,6 +8,7 @@ require 'rake/rdoctask'
 require 'rake/contrib/rubyforgepublisher'
 require 'rake/contrib/sshpublisher'
 require 'fileutils'
+require 'lib/tracerb'
 include FileUtils
 
 NAME              = "tracerb"
@@ -19,7 +20,7 @@ DESC
 RUBYFORGE_PROJECT = "tracerb"
 HOMEPATH          = "http://#{RUBYFORGE_PROJECT}.rubyforge.org"
 BIN_FILES         = %w(tracerb)
-VERS              = "0.0.1"
+VERS              = Tracerb::VERSION
 
 REV = File.read(".svn/entries")[/committed-rev="(d+)"/, 1] rescue nil
 CLEAN.include ['**/.*.sw?', '*.gem', '.config']

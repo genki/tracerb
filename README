@@ -1,9 +1,11 @@
 
 = tracerb
 
+The ruby ray tracer.
 
 == Description
 
+The ray tracer written in ruby for benchmark of various Ruby implementations.
 
 == Installation
 
@@ -15,7 +17,6 @@
 
 	gem install tracerb
 
-
 == Features/Problems
 
 
@@ -26,4 +27,4 @@
 
 Author::    Genki Takiuchi <genki@s21g.com>
 Copyright:: Copyright (c) 2008 Genki Takiuchi
-License::   
+License::   MIT License

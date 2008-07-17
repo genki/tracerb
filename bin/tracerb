@@ -1,1 +1,13 @@
 #!/usr/bin/env ruby
+TRACERB_ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+$:.unshift(File.join(TRACERB_ROOT, 'lib'))
+
+require 'tracerb'
+require 'optparse'
+
+Version = Tracerb::VERSION
+opt = OptionParser.new
+opt.on('-h', '--help', 'Show this message.'){puts opt.help; exit}
+opt.on('-v', '--version', 'Show version number.'){puts opt.ver; exit}
+opt.order!(ARGV)
+
